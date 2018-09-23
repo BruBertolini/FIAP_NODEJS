@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>FIAP -Cursos</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+    <header class="topo">
+        Fiap - Cursos
+    </header>
+    <div class="container">
+        <h4 class="login">Cadastrar Curso</h4>
+
+        <form action="/cadCursos" method="post" class="form">
+            <div class="form-group">
+                <label for="cursoCodigo">Código</label>
+                <input type="text" name="curso[codigo]" class="form-control" id="cursoCodigo" aria-describedby="emailHelp" placeholder="Nome">
+            </div>
+            <div class="form-group">
+                <label for="cursoDescricao">Descrição</label>
+                <input type="text" name="curso[descricao]" class="form-control" id="cursoDescricao" placeholder="Telefone">
+            </div>
+            <div class="form-group">
+                <label for="cursoCh">Carga Horária</label>
+                <input type="text" name="curso[ch]" class="form-control" id="cursoCh" placeholder="Carga Horaria">
+            </div>
+            <div class="form-control">
+                <label for="cursoCategoria">Categoria</label>
+                <select type="text" name="curso[categoria]" class="form-control" id="cursoCategoria" placeholder="Categoria">
+                    <option>Desenvolvimento</option>
+                    <option>Design</option>
+                    <option>Jogos</option>
+                    <option>Outros</option>
+                </select>
+            </div>
+            <div class="btn_div">
+                <button type="submit" class="btn btn-primary">Cadastrar</button>
+            </div>
+        </form>
+    </div>
+    <footer class="footer">
+        <small>Copyright@ 2018</small>
+    </footer>
+</body>
+
+</html>

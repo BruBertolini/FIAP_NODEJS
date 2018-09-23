@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>FIAP - Cursos</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+   
+    <header class="topo">
+       Fiap - Cursos
+    </header>
+    <div class="container">
+        <table class="table">
+            <thead>
+                <th scope="col">Codigo</th>
+                <th scope="col">Descrição</th>
+                <th scope="col">Carga Horaria</th>
+                <th scope="col">Categoria</th>
+            </thead>
+            <tbody>
+                    <% cursos.forEach(function(curso, index) { %> 
+                    <tr>
+                        <td>
+                           <%= curso.codigo %>
+                        </td>
+                        <td>
+                            <%= curso.descricao %>
+                        </td>
+                        <td>
+                            <%= curso.ch %>
+                        </td>
+                        <td>
+                            <%= cursos.categoria %>
+                        </td>
+                    </tr>
+                <% }) %>
+                
+            </tbody>
+        </table>
+          
+    </div>
+    <footer class="footer">
+        <small>Copyright@ 2018</small>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,15 @@
+module.exports = function (app){
+    var mongoose = require('mongoose');
+    var Schema = mongoose.Schema;
+
+    var curso = Schema({
+        codigo: {type: Number, required: true},
+        descricao: {type: String},
+        ch: {type: Number},
+        categoria: {type: String}
+    });
+    return mongoose.model('curso', curso);
+
+    
+};
+
