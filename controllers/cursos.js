@@ -39,10 +39,15 @@ module.exports = function(app) {
         categoria: categoria
       };
 
+      console.log("AQUI")
       Cursos.create(cursos, function(erro, cursos) {
         if (erro) {
-          response.render("cursos/cadCursos", params);
+          console.log("AQUI ERRO:", erro)
+
+          response.render("cursos/cadastro", params);
         } else {
+          console.log("AQUI SUCESSO")
+
           response.redirect("/menu");
         }
       });
